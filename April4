@@ -1,0 +1,20 @@
+a = [['Rhia',10,20,30,40,50],
+           ['Alan',75,80,75,85,100],
+           ['Smith',80,80,80,90,95]]
+
+b = [0] * 3
+for i in range(len(a)):
+    b[i]=[a[i][0],a[i][1]]
+print(b)
+a[2]=['Sam',82,79,88,97,99]
+
+for i in range(len(a)):
+    b[i]=[a[i][0],a[i][1]]
+print(b)
+a[0][4]=95
+print(a)
+a[0].append(73)
+a[1].append(80)
+a[2].append(85)
+
+print(a)
