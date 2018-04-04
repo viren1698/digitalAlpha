@@ -1,0 +1,24 @@
+import re
+
+
+stri="#Python is is  is an interpreted high level programming language for general-purpose programming*."
+
+stri=re.sub("\W+"," ",stri)
+listt=stri.split()
+print(listt)
+pln=[]
+dictt={}
+
+dict1={i:listt.count(i) for i in listt}
+print(dict1)
+
+for i in range(len(listt)):
+    if(listt[i]==listt[i][::-1]):
+        pln.append(listt[i])
+   
+       
+"""print(pln) """
+print(pln)
+
+           
+
