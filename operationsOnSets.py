@@ -1,0 +1,16 @@
+A = {5,3,8,6,1}
+B = {1,5,3,4,2}
+union_set = A.union(B)
+intersection_set = A.intersection(B)
+A_B = A.difference(B)
+B_A = B.difference(A)
+max_A = max(list(A))
+min_A = min(list(A))
+max_B = max(list(B))
+min_B = min(list(B))
+print("The union of set A and B is",union_set)
+print("The intersection of set A and B is",intersection_set)
+print("The difference between set A and B is",A_B)
+print("The difference between set B and A is",B_A)
+print("The maximum and minimum of set A are ",max_A, min_A)
+print("The maximum and minimum of set B are ",max_B, min_B)
