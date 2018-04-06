@@ -1,0 +1,94 @@
+
+lines = [11.95,11.91,11.86,11.94,12.00,11.93,12.00,11.94]
+lines.sort()
+print(lines)
+sr=0
+i=0
+for i in range(lines.__len__()):
+    sr=int(lines[i])+sr
+
+
+# print("Mean="+str(sr/i+1)+"\n total rent="+str(sr)+"\n total no="+str(i+1))
+print("Mean="+str(sr/i+1))
+if((i+1)%2==0):
+    median=int(int(lines[int(i/2)])+int(lines[int(i/2+1)]))/2
+    # print((lines[int(i/2)])+(lines[int(i/2+1)]))
+
+else:
+    median=int(lines[int(i/2+1)])
+
+print("Median="+str(median))
+
+ii=0
+cnt=0
+highest=0
+element=0;
+for ii in range(lines.__len__()):
+    j = ii + 1
+    for j in range(lines.__len__()):
+        if (lines[ii]==lines[j]):
+            cnt=cnt+1
+        else:
+            cnt=0
+        if(highest<=cnt):
+            highest=cnt
+            element=lines[ii]
+    cnt=0
+
+print("Mode="+str(element))
+
+
+
+
+
+
+
+
+
+
+
+
+lineY = [12.10,11.95,11.99,11.94,11.89,12.01,11.99,11.94]
+lineY.sort()
+print(lineY)
+sr=0
+i=0
+for i in range(lineY.__len__()):
+    sr=int(lineY[i])+sr
+
+
+# print("Mean="+str(sr/i+1)+"\n total rent="+str(sr)+"\n total no="+str(i+1))
+print("Mean="+str(sr/i+1))
+if((i+1)%2==0):
+    median=int(int(lineY[int(i/2)])+int(lineY[int(i/2+1)]))/2
+    # print((lineY[int(i/2)])+(lineY[int(i/2+1)]))
+
+else:
+    median=int(lineY[int(i/2+1)])
+
+print("Median="+str(median))
+
+ii=0
+cnt=0
+highest=0
+element=0;
+for ii in range(lineY.__len__()):
+    j = ii + 1
+    for j in range(lineY.__len__()):
+        if (lineY[ii]==lineY[j]):
+            cnt=cnt+1
+        else:
+            cnt=0
+        if(highest<=cnt):
+            highest=cnt
+            element=lineY[ii]
+    cnt=0
+
+print("Mode="+str(element))
+
+
+
+
+
+
+

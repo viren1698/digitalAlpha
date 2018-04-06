@@ -1,0 +1,34 @@
+para=input("enter something")
+listt=para.split(".")
+length=listt.__len__()
+listt[length//2]="UST Global specializes in Health care, retail & Consumer Goods, Banking & Financial Services, Telecom, Media & Technology, Insurence, Transportation & Logistics and Manufacturing & Utilities."
+print(listt)
+
+uppercases=0
+lowercases=0
+vowels=0
+specialchars=0
+repeatingwrds=[]
+for i in range(len(listt)):
+    wordslist=listt[i].split(" ")
+    print(wordslist)
+    for j in range(len(wordslist[i])):
+        if(wordslist[i][j].isupper()):
+            uppercases=uppercases+1
+        if (wordslist[i][j]).islower():
+            lowercases = lowercases + 1
+        if (not(wordslist[i][j]).isalnum()):
+            specialchars = specialchars + 1
+        if (wordslist[i][j]=='A'or wordslist[i][j]=='E'or wordslist[i][j]=='I'or wordslist[i][j]=='O'or wordslist[i][j]=='U'or wordslist[i][j]=='a'or
+                wordslist[i][j]=='e'or wordslist[i][j]=='i'or wordslist[i][j]=='o'or wordslist[i][j]=='u'):
+            vowels = vowels + 1
+            
+
+
+
+
+print(uppercases)
+print(lowercases)
+print(vowels)
+print(specialchars)
+

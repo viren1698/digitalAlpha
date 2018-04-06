@@ -1,0 +1,26 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr  6 15:04:48 2018
+
+@author: user
+"""
+numbers=[12,6,48,37,88,31,54,11,60,122,105,88,122,155,105]
+sortedlist=sorted(numbers)
+print(sortedlist)
+strt=0
+end=len(sortedlist)
+middle=(strt+end)//2
+data=int(input("enter number to find its pos"))
+for i in range(len(sortedlist)):
+    middle=(strt+end)//2
+    if(sortedlist[middle]==data):
+        print("element found at:")
+        print(middle)
+        break
+    elif(sortedlist[middle]<data):
+        strt=middle+1
+    elif(sortedlist[middle]>data):
+        end=middle-1
+
+
+    

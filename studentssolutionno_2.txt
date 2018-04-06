@@ -1,0 +1,76 @@
+
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr  6 15:26:31 2018
+
+@author: user
+"""
+import numpy as np
+
+num = 3
+student = []
+english = []
+maths = []
+sst = []
+percent = []
+grade = []
+for i in range(num):
+    student.append(str(input("ENTER NAME of Student")))
+    english.append(int(input("enter marks in english")))
+    maths.append(int(input("enter marks in maths")))
+    sst.append(int(input("enter marks in sst")))
+
+for i in range(num):
+    print(student[i] + "\t" + str(english[i]) + "\t" + str(maths[i]) + "\t" + str(maths[i]))
+
+print("mean of english is" + np.mean(english))
+print("mean of sst is" + np.mean(sst))
+print("mean of maths is" + np.mean(maths))
+summ = []
+
+for i in range(num):
+    summ.append(maths[i] + english[i] + sst[i])
+    percent.append(summ[i] / 3)
+    print("student" + str(student[i]) + str(summ[i]))
+    if (percent[i] > 90):
+        grade.append("A+")
+    elif (percent[i] < 90 and percent[i] >= 80):
+        grade.append("A")
+    elif (percent[i] < 80 and percent[i] >= 70):
+        grade.append("B+")
+    elif (percent[i] < 70 and percent[i] >= 60):
+        grade.append("B")
+    elif (percent[i] < 60 and percent[i] >= 50):
+        grade.append("C")
+    elif (percent[i] < 50):
+
+        grade.append("D")
+
+print("Name" + "\t" + "sum" + "\t" + "percentage" + "\t" + "Grade")
+
+for i in range(num):
+    print(student[i] + "\t" + str(sum[i]) + "\t" + str(percent[i] + "\t" + grade[i]))
+
+
+
+
+
+
+
+
+
+
+
+Name	english		math	sst
+Virendra	90	91	91
+Rahul	65	80	80
+Atul	77	44	44
+studentVirendra276
+studentRahul234
+studentAtul177
+Name	sum	percentage	Grade
+Virendra	276	92	A+
+Rahul	234	78	B+
+Atul	177	59	C
+
+

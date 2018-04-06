@@ -1,0 +1,38 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Apr  6 14:44:08 2018
+
+@author: user
+"""
+faimlysize = 5
+faimly = []
+children=[]
+youth=[]
+middleaged=[]
+oldaged=[]
+for i in range(faimlysize):
+    name = str(input("name"))
+    age = str(input("age"))
+    faimly.append(str(name+","+age))
+
+for i in range(faimlysize):
+    x = faimly[i].split(",")
+    if (int(x[1]) < 14):
+        children.append(x[0])
+    elif (int(x[1]) > 14 and int(x[1]) < 25):
+        children.append(x[0])
+    elif(int(x[1]) > 25 and int(x[1]) < 45):
+        middleaged.append(x[0])
+    elif (int(x[1]) >45):
+        oldaged.append(x[0])
+
+print("children: "+str(children))
+print("youth: "+str(youth))
+print("middleaged:"+str(middleaged))
+print("senior :"+str(oldaged))
+
+
+
+
+
+
