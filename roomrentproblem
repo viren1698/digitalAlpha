@@ -1,0 +1,67 @@
+import matplotlib.pyplot as plt
+import xlrd
+import numpy as np
+#import statistics as stat
+#import numpy as np
+
+ExcelFileName= 'Data.xlsx'
+workbook = xlrd.open_workbook(ExcelFileName)
+worksheet = workbook.sheet_by_name("Sheet1")
+
+num_rows = worksheet.nrows  #Number of Rows
+num_cols = worksheet.ncols  #Number of Columns
+
+result_data=[]
+row_data=[]
+for curr_row in range(0, num_rows, 1):
+        #row_data = []
+ 
+        for curr_col in range(0, num_cols, 1):
+            data = worksheet.cell_value(curr_row, curr_col) # Read the data in the current cell
+            #print(data)
+            row_data.append(data)
+            
+print(row_data)
+print("\n")
+
+dict1={}
+for i in row_data:
+   if(dict1.get(i)):
+        dict1[i]+=1
+   else:
+        dict1[i]=1
+        
+listx=[]
+listy=[]
+for i in dict1:
+    listx.append(i)
+    listy.append(dict1[i])
+    
+print(listx)
+print(listy)
+
+plt.scatter(listx,listy)
+
+meanx=np.mean(listx)
+meany=np.mean(listy)
+print(meanx)
+print(meany)
+#Least square method
+num=0
+denom=0
+for i in range(len(listx)):
+    num+=(listx[i]-meanx)*(listy[i]-meany)
+    denom+=(listx[i]-meanx)**2
+    
+b2=num/denom
+b1=meany-b2*meanx
+print(b1)
+print(b2)
+
+X=np.linspace(min(listx),max(listx),1000)
+Y=b2*X +b1
+plt.plot(X,Y,color='red',label='Regression Line')
+plt.show()
+num_bins=5
+n, bins, patches = plt.hist(row_data, num_bins, facecolor='blue', alpha=0.5)
+plt.show()
