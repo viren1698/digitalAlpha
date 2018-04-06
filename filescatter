@@ -1,0 +1,28 @@
+
+import matplotlib.pyplot as plt
+import numpy as np
+ 
+listx=[14.2,16.4,11.9,15.2,18.5,22.1,19.4,25.1]
+listy=[215,325,185,332,406,522,412,614]
+plt.scatter(listx,listy)
+
+meanx=np.mean(listx)
+meany=np.mean(listy)
+print(meanx)
+print(meany)
+#Least square method
+num=0
+denom=0
+for i in range(len(listx)):
+    num+=(listx[i]-meanx)*(listy[i]-meany)
+    denom+=(listx[i]-meanx)**2
+    
+b2=num/denom
+b1=meany-b2*meanx
+print(b1)
+print(b2)
+
+X=np.linspace(min(listx),max(listx),1000)
+Y=b2*X +b1
+plt.plot(X,Y,color='red',label='Regression Line')
+plt.show()
