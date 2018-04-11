@@ -1,0 +1,43 @@
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import sklearn.preprocessing as preprocessing
+import sklearn.linear_model as linear_model
+import sklearn
+
+def number_encode_features(df):
+    result = df.copy()
+    encoders = {}
+    for column in result.columns:
+        if result.dtypes[column] == np.object:
+            encoders[column] = preprocessing.LabelEncoder()
+            result[column] = encoders[column].fit_transform(result[column])
+    return result, encoders
+
+
+
+
+
+data = pd.read_csv("employee_data.csv")
+print(data.head())
+print(data.corr())
+
+
+plt.scatter(data["Certification"],data["Salary"])
+plt.plot(data["Certification"],np.polyval(np.polyfit(data["Certification"],data["Salary"],1),data["Certification"]),color='red')
+
+plt.scatter(data["Experience in years"],data["Salary"])
+plt.plot(data["Experience in years"],np.polyval(np.polyfit(data["Experience in years"],data["Salary"],1),data["Experience in years"]),color='red')
+
+encoded_data, _ = number_encode_features(data)
+print(encoded_data.corr())
+
+X=data[["Worked Hours","Certification","Experience in years"]]
+y=data["Salary"]
+lm = linear_model.LinearRegression()
+model = lm.fit(X,y)
+predictions = lm.predict(X)
+print("Predicted Salary\n")
+print(predictions)
+
