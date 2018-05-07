@@ -1,52 +1,64 @@
-class animals:
+class high:
     def __init__(self):
+        self.student = ["raj", "rabi", "akash", "atul"]
+        self.__teachers = ["prema", "thiruchirapalli", "vinci", "vinod"]
+        self.__principal=["ashok age 54 height 6'1"]
+        self.__staffmembers=["raj", "rabi", "akash", "atul"]
         pass
-    def type(self):
-        print("this is animal class")
+    def getteachersrecord(self):
+        return(self.__teachers)
 
-class pets(animals):        ##normal inheritance
+    def getstudentsrecord(self):
+        return(self.student)
+
+    def getprincipalsrecord(self):
+        return (self.__principal)
+    def getstaffrecord(self):
+        return (self.__staffmembers)
+
+
+
+class principal(high):
     def __init__(self):
-        pass
-    def type(self):
-        print("this is pets class")
+        super().__init__()
+        self.t_record=super().getteachersrecord()
+        self.s_record=super().getstudentsrecord()
+        self.stf = super().getstaffrecord()
+        self.p_record=super().getprincipalsrecord()
 
-class wild(animals):       ##normal inheritance
+    def getallrecords(self):
+        print(self.t_record,self.s_record,self.stf,self.p_record)
+
+
+class staff(high):
+    def __init__(self,name):
+        super().__init__()
+        self.s_record = super().getstaffrecord()
+    def getallrecords(self):
+        print(self.s_record)
+
+class teacher(high):
     def __init__(self):
-        pass
-    def type(self):
-        print("this is wild animals class")
+        super().__init__()
+        self.s_record = super().getstudentsrecord()
+    def getallrecords(self):
+        print(self.s_record)
 
-class dog(pets):   ##multilevel inheritance   animals->pets->dog
-    def __init__(self):
-        pass
-    def type(self):
-        print("this is dog class")
-    def nooflegs(self):
-        print("4 legs")
 
-class tiger(wild):  ##multilevel inheritance   animals->wild->tiger
-    def __init__(self):
-        pass
 
-    def type(self):
-        print("this is tiger class")
+p=principal()
+p.getallrecords()
 
-    def nooflegs(self):
-        print("4 legs")
+t=teacher()
+t.getallrecords()
 
-class snake(wild,pets):  ##multiple inheritance  (pets,wild)->snake     hybrid inheritance animals->(pets,wild)->snake
-    def __init__(self):
-        pass
+stafff=staff("rajeev")
+stafff.getallrecords()
 
-    def type(self):
-        print("snake can be wild as well as pets")
 
-a=animals()
-a.type()
-s=snake()
-s.type()
-d=dog()
-d.type()
+
+
+
 
 
 
