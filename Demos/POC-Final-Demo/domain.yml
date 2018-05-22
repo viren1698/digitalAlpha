@@ -1,0 +1,85 @@
+slots:
+  service:
+    type: text
+
+
+intents:
+ - greet
+ - goodbye  
+ - benefit_inform
+ - eligibility_inform
+ - not_included_inform
+ - payment_inform
+ - coinsurance_inform
+
+entities:
+ - service
+   
+templates:
+ utter_greet:
+ - "Hey! How may I help you?"
+ - "Hi! How can I help you?"
+ - "Hi! Welcome. Do you have any queries?" 
+ - "Hello! Welcome. How may I be of your help?"
+ - "Hello! Query Please?"
+ - "Hi!Can I know about your issue?"
+ - "Hi!Please ask your Doubts?"
+ - "Hi! What do you want to know about?"
+ - "Hey there ! Any questions?"
+ - "Hi!,please enter your query."
+ - "Hello! Please mention your concerns."
+  
+ utter_goodbye:
+ - "Bye"
+ - "Have a great day!!!"
+ - "Good Bye"
+ - "Bye Bye!!"
+ - "See ya later!"
+ - "Take care"
+ - "All right then"
+ - "Have a good day!"
+ - "Good talking with you."
+ - "Thank you. It was nice talking to you."
+ - "Thank you , See you soon."
+  
+  
+  
+  
+ utter_eligibility_inform:
+ - "Yes you are eligible."
+ - "No you are not eligible"
+ - "Yes! You can go for it."
+ - "Yes! You are entitled."
+ - "Yes you are allowed."
+ - "Yes,you are permitted for this."
+ - "No! You can't go for it."
+ - "Sorry! You are not eligible."
+ - "Oops! You are not covered."
+ - "Looks like you are not covered"
+  
+ utter_not_included_inform:
+ - "Sorry! You are not covered under this benefit."
+ - "Here are the things not included:"
+ - "Your plan doesn't include the following"
+ - "The services that are not included are"
+ - "Please refer to the following that are not included as per your plan"
+  
+
+  
+ utter_payment_inform:
+ - "Here is your payment structure."
+ - "Here is your payment info : "
+ - "Payment information for your plan is :"
+ - "This is the valid info regarding your payment structure."
+ - "Here is your payment description."
+ - "The estimation for your payment is :"
+
+ 
+actions:
+ - utter_greet
+ - utter_goodbye
+ - benefits_actions.ActionBenefit
+ - utter_eligibility_inform
+ - utter_not_included_inform
+ - utter_payment_inform
+ - copay_coinsurance.ActionCopi

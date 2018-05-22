@@ -1,0 +1,54 @@
+{
+	"intents": [{
+			"tag": "Claims",
+			"patterns": ["Is written request of claim required ?",
+				"If the information is not completely and timely provided,will the claim be denied ?",
+				"Will I get claim for out-of-area services ?",
+				"Am I covered under Value-Based program ?",
+				"What is my claim status ?",
+				"What are the services under Value-Based Program ?",
+				"What is the reason for my claim being rejected ?",
+				"Am I covered under BlueCard out of United States ?",
+				"Where do I mail the claim ?",
+				"What is the maximum number of claims allowed over the year ?"
+			],
+			"responses": ["Yes,we must receive written notice of your claim within 180 days in order for benefits to be paid.",
+				"If the claim does not include enough information, we will ask for more details and it must be sent to us within the time listed below or no benefits will be covered, unless required by law.In certain cases, you may have some extra time to file a claim. If we did not get your claim within 180 days, but it is sent in as soon as reasonably possible and within one year after the 180-day period ends(i.e., within 18 months), you may still be able to get benefits. However, any claims, or additional information on claims, sent in more than 24 months after you get Covered Services will be denied.",
+				"Whenever you access healthcare services outside the geographic area we serve (the “HMO Colorado Service Area”), the claim for those services may be processed through one of the Inter-Plan Arrangements.",
+				"If you receive Covered Services under a Value-Based Program inside a Host Blue’s Service Area, you will not be responsible for paying any of the Provider Incentives, risk-sharing, and/or Care Coordinator Fees that are a part of such an arrangement, except when a Host Blue passes these fees to HMO Colorado through average pricing or fee schedule adjustments. Additional information is available upon request.",
+				"What is my claim status ?",
+				"If you receive Covered Services under a Value-Based Program inside a Host Blue’s Service Area, you will not be responsible for paying any of the Provider Incentives, risk-sharing, and/or Care Coordinator Fees that are a part of such an arrangement, except when a Host Blue passes these fees to HMO Colorado through average pricing or fee schedule adjustments. Additional information is available upon request.",
+				"Apologies, your claim or additional information on claim was sent in more than 24 months after you got the covered service",
+				"If you plan to travel outside the United States, call Member Services to find out your BlueCard Worldwide benefits. Benefits for services received outside of the United States may be different from services received in the United States. The Plan only covers Emergency, including ambulance, and Urgent Care outside of the United States. Remember to take an up to date health ID card with you.",
+				"Where do I mail the claim ?",
+				"What is the maximum number of claims allowed over the year ?"
+			]
+		},
+		{
+			"tag": "Benefits",
+			"patterns": ["What are the benefits of my plan",
+				"What kind of treatments do my plan cover",
+				"How do I obtain approval of my benefits",
+				"Am I eligible for ambulance service",
+				"Am I covered in air ambulance",
+				"Am I covered In autism services",
+				"Does my benefit cover chemotherapy",
+				"Am I covered in dental services",
+				"Do my benefits cover accidental injuries",
+				"Does my plan cover diagnostic services"
+			],
+			"responses": [
+				"What are the benefits of my plan",
+				"What kind of treatments do my plan cover",
+				"How do I obtain approval of my benefits",
+				"Yes, Ambulance services are subject to Medical Necessity reviews by us. Emergency ground ambulance services do not require Precertification and are allowed regardless of whether the Provider is an InNetwork or Out-of-Network Provider",
+				"Yes, Benefits are only available for air ambulance when it is not appropriate to use a ground or water ambulance",
+				"Treatment for Autism Spectrum Disorders must be prescribed or ordered by a Doctor or psychologist",
+				"Yes, your plan covers the drugs used for chemotherapy",
+				"Yes, Dental care treatment decisions are made by you and your dentist. . We cover treatment based on what benefits you have, not whether the care is medically or dentally necessary. The only exception is when you get orthodontic care – we do review those services to make sure they are appropriate.",
+				"Benefits are also available for dental work needed to treat injuries to the jaw, sound natural teeth, mouth or face as a result of an accident. An injury that results from chewing or biting is not considered an Accidental Injury under this Plan, unless the chewing or biting results from a medical or mental condition",
+				"Yes, Your Plan includes benefits for tests or procedures to find or check a condition when specific symptoms exist."
+			]
+		}
+	]
+}

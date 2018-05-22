@@ -1,0 +1,83 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_goodbye
+- action_benefit
+- utter_eligibility_inform
+- utter_not_included_inform
+- utter_payment_inform
+- action_copi
+actions:
+- utter_greet
+- utter_goodbye
+- benefits_actions.ActionBenefit
+- utter_eligibility_inform
+- utter_not_included_inform
+- utter_payment_inform
+- copay_coinsurance.ActionCopi
+config:
+  store_entities_as_slots: true
+entities:
+- service
+intents:
+- greet
+- goodbye
+- benefit_inform
+- eligibility_inform
+- not_included_inform
+- payment_inform
+- coinsurance_inform
+slots:
+  service:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_eligibility_inform:
+  - text: Yes you are eligible.
+  - text: No you are not eligible
+  - text: Yes! You can go for it.
+  - text: Yes! You are entitled.
+  - text: Yes you are allowed.
+  - text: Yes,you are permitted for this.
+  - text: No! You can't go for it.
+  - text: Sorry! You are not eligible.
+  - text: Oops! You are not covered.
+  - text: Looks like you are not covered
+  utter_goodbye:
+  - text: Bye
+  - text: Have a great day!!!
+  - text: Good Bye
+  - text: Bye Bye!!
+  - text: See ya later!
+  - text: Take care
+  - text: All right then
+  - text: Have a good day!
+  - text: Good talking with you.
+  - text: Thank you. It was nice talking to you.
+  - text: Thank you , See you soon.
+  utter_greet:
+  - text: Hey! How may I help you?
+  - text: Hi! How can I help you?
+  - text: Hi! Welcome. Do you have any queries?
+  - text: Hello! Welcome. How may I be of your help?
+  - text: Hello! Query Please?
+  - text: Hi!Can I know about your issue?
+  - text: Hi!Please ask your Doubts?
+  - text: Hi! What do you want to know about?
+  - text: Hey there ! Any questions?
+  - text: Hi!,please enter your query.
+  - text: Hello! Please mention your concerns.
+  utter_not_included_inform:
+  - text: Sorry! You are not covered under this benefit.
+  - text: 'Here are the things not included:'
+  - text: Your plan doesn't include the following
+  - text: The services that are not included are
+  - text: Please refer to the following that are not included as per your plan
+  utter_payment_inform:
+  - text: Here is your payment structure.
+  - text: 'Here is your payment info : '
+  - text: 'Payment information for your plan is :'
+  - text: This is the valid info regarding your payment structure.
+  - text: Here is your payment description.
+  - text: 'The estimation for your payment is :'
+topics: []

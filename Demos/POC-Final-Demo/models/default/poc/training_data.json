@@ -1,0 +1,673 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "benefit_inform",
+        "entities": [
+          {
+            "start": 8,
+            "end": 24,
+            "value": "orthodontic care",
+            "entity": "service"
+          }
+        ],
+        "text": "What is orthodontic care ?"
+      },
+      {
+        "intent": "benefit_inform",
+        "entities": [
+          {
+            "start": 6,
+            "end": 28,
+            "value": "orthodontic treatments",
+            "entity": "service"
+          }
+        ],
+        "text": "Which orthodontic treatments are covered by my plan?"
+      },
+      {
+        "intent": "payment_inform",
+        "entities": [
+          {
+            "start": 35,
+            "end": 58,
+            "value": "orthodontotic treatment",
+            "entity": "service"
+          }
+        ],
+        "text": "How can I get an estimation for my orthodontotic treatment plan?"
+      },
+      {
+        "intent": "payment_inform",
+        "entities": [
+          {
+            "start": 19,
+            "end": 42,
+            "value": "pretreatment estimation",
+            "entity": "service"
+          }
+        ],
+        "text": "How can i find the pretreatment estimation ?"
+      },
+      {
+        "intent": "benefit_inform",
+        "entities": [
+          {
+            "start": 45,
+            "end": 62,
+            "value": " Orthodontic Care",
+            "entity": "service"
+          }
+        ],
+        "text": "When can I be eligible for Dentally Necessary Orthodontic Care plan? "
+      },
+      {
+        "intent": "benefit_inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 26,
+            "value": "Orthodontic Care",
+            "entity": "service"
+          }
+        ],
+        "text": "What does Orthodontic Care include?"
+      },
+      {
+        "intent": "eligibility_inform",
+        "entities": [
+          {
+            "start": 18,
+            "end": 35,
+            "value": "limited treatment",
+            "entity": "service"
+          }
+        ],
+        "text": "Am I eligible for limited treatment?"
+      },
+      {
+        "intent": "eligibility_inform",
+        "entities": [
+          {
+            "start": 14,
+            "end": 36,
+            "value": "Interceptive treatment",
+            "entity": "service"
+          }
+        ],
+        "text": "Can I opt for Interceptive treatment?"
+      },
+      {
+        "intent": "eligibility_inform",
+        "entities": [
+          {
+            "start": 19,
+            "end": 37,
+            "value": "Complete treatment",
+            "entity": "service"
+          }
+        ],
+        "text": "I want to go for a Complete treatment. Am I eligible for that?"
+      },
+      {
+        "intent": "benefit_inform",
+        "entities": [
+          {
+            "start": 21,
+            "end": 37,
+            "value": "Orthodontic care",
+            "entity": "service"
+          }
+        ],
+        "text": "What treatments does Orthodontic care cover?"
+      },
+      {
+        "intent": "benefit_inform",
+        "entities": [
+          {
+            "start": 20,
+            "end": 36,
+            "value": "Orthodontic care",
+            "entity": "service"
+          }
+        ],
+        "text": "What therapies does Orthodontic care cover?"
+      },
+      {
+        "intent": "eligibility_inform",
+        "entities": [
+          {
+            "start": 13,
+            "end": 40,
+            "value": "Removable Appliance Therapy",
+            "entity": "service"
+          }
+        ],
+        "text": "Can I go for Removable Appliance Therapy ?"
+      },
+      {
+        "intent": "eligibility_inform",
+        "entities": [
+          {
+            "start": 14,
+            "end": 37,
+            "value": "Fixed Appliance Therapy",
+            "entity": "service"
+          }
+        ],
+        "text": "Can I opt for Fixed Appliance Therapy?"
+      },
+      {
+        "intent": "payment_inform",
+        "entities": [
+          {
+            "start": 55,
+            "end": 71,
+            "value": "Orthodontic Care",
+            "entity": "service             "
+          }
+        ],
+        "text": "How will I continue getting paid for my treatments for Orthodontic Care?"
+      },
+      {
+        "intent": "payment_inform",
+        "entities": [
+          {
+            "start": 27,
+            "end": 35,
+            "value": "payments",
+            "entity": "service"
+          }
+        ],
+        "text": "Till when can I expect the payments from your side?"
+      },
+      {
+        "intent": "payment_inform",
+        "entities": [
+          {
+            "start": 54,
+            "end": 62,
+            "value": "payments",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the interval in which I will be receiving the payments?"
+      },
+      {
+        "intent": "payment_inform",
+        "entities": [
+          {
+            "start": 19,
+            "end": 35,
+            "value": "Orthodontic care",
+            "entity": "service"
+          }
+        ],
+        "text": "How will I pay for Orthodontic care?"
+      },
+      {
+        "intent": "not_included_inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 21,
+            "value": "Orthodontic Care",
+            "entity": "service"
+          }
+        ],
+        "text": "What Orthodontic Care does not include? "
+      },
+      {
+        "intent": "not_included_inform",
+        "entities": [
+          {
+            "start": 53,
+            "end": 69,
+            "value": "Orthodontic Care",
+            "entity": "service"
+          }
+        ],
+        "text": "Will the separately billed treatments be included in Orthodontic Care?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 49,
+            "value": "oral surgery services",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for oral surgery services?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "oral test",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for oral test?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 44,
+            "value": "full mouth x-ray",
+            "entity": "service"
+          },
+          {
+            "start": 39,
+            "end": 44,
+            "value": "x-ray",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for full mouth x-ray?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 37,
+            "value": "bitewings",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for bitewings?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 42,
+            "value": "panoramic film",
+            "entity": "service             "
+          }
+        ],
+        "text": "What is the coinsurance for panoramic film?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 39,
+            "end": 54,
+            "value": "dental cleaning",
+            "entity": "service"
+          }
+        ],
+        "text": "How much coinsurance is to be paid for dental cleaning?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 39,
+            "end": 57,
+            "value": "fluoride treatment",
+            "entity": "service             "
+          }
+        ],
+        "text": "How much coinsurance is to be paid for fluoride treatment?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 32,
+            "end": 40,
+            "value": "sealants",
+            "entity": "service"
+          }
+        ],
+        "text": "How much is the coinsurance for sealants?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 34,
+            "end": 51,
+            "value": "space maintainers",
+            "entity": "service"
+          }
+        ],
+        "text": "How much coinsurance do I pay for space maintainers?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 47,
+            "value": "emergency treatment",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for emergency treatment?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 30,
+            "end": 37,
+            "value": "filling",
+            "entity": "service"
+          }
+        ],
+        "text": "How about the coinsurance for filling?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 43,
+            "value": "Amalgam filling",
+            "entity": "service             "
+          }
+        ],
+        "text": "What is the coinsurance for Amalgam filling?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 31,
+            "end": 46,
+            "value": "composite resin",
+            "entity": "service"
+          }
+        ],
+        "text": "May I know the coinsurance for composite resin?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 50,
+            "value": "gold foil restorations",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for gold foil restorations?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 27,
+            "end": 33,
+            "value": "inlays",
+            "entity": "service"
+          }
+        ],
+        "text": "What's the coinsurance for inlays?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 31,
+            "end": 45,
+            "value": "Recement Crown",
+            "entity": "service"
+          }
+        ],
+        "text": "Can I know the coinsurance for Recement Crown?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 39,
+            "value": "Resin Crown",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for Resin Crown?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 46,
+            "end": 62,
+            "value": "Sedative Filling",
+            "entity": "service             "
+          }
+        ],
+        "text": "Could you be able to find the coinsurance for Sedative Filling?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 41,
+            "value": "Pin Retention",
+            "entity": "service             "
+          }
+        ],
+        "text": "What is the coinsurance for Pin Retention?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 26,
+            "end": 53,
+            "value": "extraction of erupted tooth",
+            "entity": "service             "
+          }
+        ],
+        "text": "Whats the coinsurance for extraction of erupted tooth?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 33,
+            "end": 45,
+            "value": "exposed root",
+            "entity": "service             "
+          }
+        ],
+        "text": "Can you find the coinsurance for exposed root?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 47,
+            "value": "surgical extraction",
+            "entity": "service             "
+          }
+        ],
+        "text": "What is the coinsurance for surgical extraction?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 47,
+            "value": "diagnostic services",
+            "entity": "service"
+          }
+        ],
+        "text": "What is the coinsurance for diagnostic services?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 32,
+            "end": 52,
+            "value": "restorative services",
+            "entity": "service"
+          }
+        ],
+        "text": "How much is the coinsurance for restorative services?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 28,
+            "end": 46,
+            "value": "Root Canal Therapy",
+            "entity": "service             "
+          }
+        ],
+        "text": "What is the coinsurance for Root Canal Therapy?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 31,
+            "end": 47,
+            "value": "Orthodontic Care",
+            "entity": "service             "
+          }
+        ],
+        "text": "Can I know the coinsurance for Orthodontic Care?"
+      },
+      {
+        "intent": "coinsurance_inform",
+        "entities": [
+          {
+            "start": 32,
+            "end": 51,
+            "value": "Endodontic services",
+            "entity": "service             "
+          }
+        ],
+        "text": "How much is the coinsurance for Endodontic services?"
+      },
+      {
+        "intent": "eligibility_inform",
+        "entities": [
+          {
+            "start": 12,
+            "end": 26,
+            "value": " tooth cleaned",
+            "entity": "service"
+          }
+        ],
+        "text": "Can I get my tooth cleaned?"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hello"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hi"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hi! How are you?"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Howdy"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hieee"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "What's Up?"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "I am fine."
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "how are you doing?"
+      },
+      {
+        "intent": "greet",
+        "entities": [],
+        "text": "Hey there"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "Bye"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "bye bye"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "Stop"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "End"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "See you later"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "Nice talking to you"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "Thank you"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "Take care"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "see you soon"
+      },
+      {
+        "intent": "goodbye",
+        "entities": [],
+        "text": "good bye"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

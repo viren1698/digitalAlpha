@@ -1,0 +1,169 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+input {
+    border: 5px solid white; 
+    -webkit-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    -moz-box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    box-shadow: 
+      inset 0 0 8px  rgba(0,0,0,0.1),
+            0 0 16px rgba(0,0,0,0.1); 
+    padding: 15px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 0 10px 0;
+	content:"Type your query";
+	position:absolute;
+}
+button{
+position:absolute;
+margin-left:80%;
+height:60px;
+}
+label{
+position:absolute;
+margin-left:80%;
+height:60px;
+}
+svg:hover{
+fill:#0093f7
+}
+/* Chat containers */
+.chat-container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+	height:auto;
+}
+
+/* Darker chat container */
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+/* Clear floats */
+.chat-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Style images */
+.chat-container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+/* Style the right image */
+.chat-container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+/* Style time text */
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+    float: left;
+    color: #999;
+}
+</style>
+<body>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8  col-md-offset-2" style="background:url('/static/bg.png');">
+				<div style="height:80%;overflow-y: scroll;border-bottom:5px solid #4a4a4a" id="chat-div">
+				<div id="old-chat">
+				</div>
+				<div id="chat-box">
+				{% with messages = get_flashed_messages() %}
+					{% if messages %}
+						<div class="chat-container">
+							<img src="static/userx64.png" alt="Avatar">
+							<p>{{ messages[0]}}</p>
+							<span class="time-right" id="query-time"></span>
+						</div>
+						<div class="chat-container darker">
+							<img src="static/robot.png" alt="Avatar" class="right">
+							<p>{% autoescape false %}
+							{{ messages[1]|safe}}
+							{% endautoescape %}</p>
+							<span class="time-left" id="response-time"></span>
+						</div>								
+						<!--
+						{% for message in messages %}
+							<p style="margin-top:5%">{{ message[1]}}</p>
+						{% endfor %}                
+						-->
+					{% endif %}
+				{% endwith %}
+				</div>
+				</div>
+				<footer>
+					<form action="" method="post" onsubmit="retainData()" id="query_form">
+						{{ form.csrf }}						
+						<div class="input text">
+							{{ form.name(size = 80) }}	
+						<label>
+						<button type="submit" class="btn btn-default" style="display:none"></button><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="auto" height="50px" viewBox="0 0 535.5 535.5" style="enable-background:new 0 0 535.5 535.5;padding-top:15px;" xml:space="preserve">
+<g>
+	<g id="send">
+		<polygon points="0,497.25 535.5,267.75 0,38.25 0,216.75 382.5,267.75 0,318.75"/>
+	</g>
+</g>
+</svg></label>
+						</div>						
+						<div class="input submit">
+							
+						</div>
+					</form>
+				</footer>
+			</div>
+		</div>
+	</div>
+	<script>	
+		time=new Date();		
+        document.getElementById("query-time").innerHTML = time.getHours() + ":"+time.getMinutes();
+		document.getElementById("response-time").innerHTML = time.getHours() + ":"+time.getMinutes();	
+		function retainData(){
+		data = document.getElementById("chat-box").innerHTML
+		window.name += data		
+		return true;
+		}
+		window.onload = function() {
+		document.getElementById("old-chat").innerHTML=window.name
+		var objDiv = document.getElementById("chat-div");
+		objDiv.scrollTop = objDiv.scrollHeight;
+};
+
+function submitChildData(childNode){
+ document.getElementById("name").value = childNode;
+ retainData();
+ document.getElementById("query_form").submit();
+}
+		
+	
+	
+	
+    </script>
+</body>
+</html>

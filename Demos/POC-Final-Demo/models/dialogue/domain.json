@@ -1,0 +1,22 @@
+{
+  "features": [
+    "intent_greet",
+    "intent_goodbye",
+    "intent_benefit_inform",
+    "intent_eligibility_inform",
+    "intent_not_included_inform",
+    "intent_payment_inform",
+    "intent_coinsurance_inform",
+    "entity_service",
+    "slot_service_0",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_utter_greet",
+    "prev_utter_goodbye",
+    "prev_action_benefit",
+    "prev_utter_eligibility_inform",
+    "prev_utter_not_included_inform",
+    "prev_utter_payment_inform",
+    "prev_action_copi"
+  ]
+}
